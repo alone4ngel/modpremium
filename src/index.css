@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: hsl(var(--heroui-background));
+  color: hsl(var(--heroui-foreground));
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(24, 24, 31, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-effect-darker {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(15, 15, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    225deg,
+    rgba(99, 102, 241, 0.2) 0%,
+    rgba(168, 85, 247, 0.2) 50%,
+    rgba(99, 102, 241, 0.2) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.animated-gradient-purple {
+  background: linear-gradient(
+    225deg,
+    rgba(168, 85, 247, 0.2) 0%,
+    rgba(99, 102, 241, 0.2) 50%,
+    rgba(168, 85, 247, 0.2) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.animated-gradient-blue {
+  background: linear-gradient(
+    225deg,
+    rgba(99, 102, 241, 0.2) 0%,
+    rgba(59, 130, 246, 0.2) 50%,
+    rgba(99, 102, 241, 0.2) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.animated-gradient-red {
+  background: linear-gradient(
+    225deg,
+    rgba(243, 18, 96, 0.2) 0%,
+    rgba(234, 88, 12, 0.2) 50%,
+    rgba(243, 18, 96, 0.2) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(243, 18, 96, 0.3);
+}
